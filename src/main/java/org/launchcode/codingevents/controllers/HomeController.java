@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @GetMapping
-    public String index() {
+    public String index(Model model) {
+        model.addAttribute("title", "Coding Events");
         return "index";
     }
 
